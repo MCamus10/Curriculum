@@ -1,0 +1,135 @@
+/* Definición de la Paleta de Colores como Variables CSS */
+:root {
+    --color-primario: #2C3E50;    /* Azul Acero (Serio, Confianza) */
+    --color-secundario: #7F8C8D;  /* Gris Hormigón (Estabilidad) */
+    --color-acento: #F39C12;      /* Amarillo Cromo (Énfasis, CTA) */
+    --color-fondo: #FFFFFF;       /* Blanco Puro (Claridad) */
+    --color-texto: #34495E;       /* Negro Suave (Legibilidad) */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Usar una fuente sans-serif legible */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Estilos de Tipografía */
+h1 { color: var(--color-primario); font-size: 2.5em; }
+h2 { color: var(--color-primario); border-bottom: 2px solid var(--color-secundario); padding-bottom: 10px; margin-bottom: 20px; }
+h3 { color: var(--color-texto); font-size: 1.4em; }
+a { color: var(--color-primario); text-decoration: none; }
+a:hover { color: var(--color-acento); }
+
+/* Estilo para las Secciones Principales */
+section {
+    padding: 60px 10%;
+    margin-bottom: 20px;
+}
+
+/* 1. HEADER (Menú de Navegación) */
+header {
+    background-color: var(--color-primario);
+    padding: 15px 10%;
+    position: sticky; /* Fija la barra al desplazarse */
+    top: 0;
+    z-index: 100;
+}
+header a {
+    color: var(--color-fondo);
+    margin-right: 20px;
+    font-weight: bold;
+}
+header a:hover {
+    color: var(--color-acento);
+}
+
+/* 2. SECCIÓN HERO / PERFIL */
+.hero {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    background-color: var(--color-fondo);
+}
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto circular */
+    border: 5px solid var(--color-secundario);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Botón CTA (Llamada a la Acción) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-acento); /* Color de acento para la acción principal */
+    color: var(--color-texto);
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #e08e0b; /* Un tono más oscuro del acento al pasar el ratón */
+    color: var(--color-fondo);
+}
+
+/* 3. EXPERIENCIA PROFESIONAL */
+.puesto {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid var(--color-acento); /* Línea de tiempo visual */
+}
+.empresa-fecha {
+    color: var(--color-secundario);
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.logro {
+    color: var(--color-acento); /* Resalta los logros clave */
+    font-weight: bold;
+}
+
+/* 4. HABILIDADES */
+.fondo-secundario {
+    background-color: #ecf0f1; /* Un gris muy claro para diferenciar la sección */
+}
+.lista-habilidades .habilidad {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* 5. FOOTER */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 30px 10%;
+    margin-top: 40px;
+}
+footer a {
+    color: var(--color-acento);
+}
+.copyright {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: var(--color-secundario);
+}
+
+.contenedor-central {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
