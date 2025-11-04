@@ -133,3 +133,58 @@ footer a {
     margin-right: auto;
     width: 90%;
 }
+
+.ejemplos {
+    border: 1px solid var(--color-secundario); /* Gris Hormigón */
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: var(--color-fondo); /* Blanco Puro */
+    transition: background-color 0.3s;
+}
+
+.ejemplos summary {
+    padding: 15px 20px;
+    cursor: pointer; /* Muestra que se puede hacer clic */
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--color-primario);
+}
+
+.contenido-oculto {
+    padding: 10px 20px 20px 20px;
+}
+
+.ejemplos:hover {
+    background-color: #F8F8F8;
+}
+
+.ejemplos[open] summary {
+    background-color: #EAECEE;
+}
+
+.tarjeta-contenido h3 {
+    color: var(--color-primario); /* Azul Acero: Serio y Confiable */
+    font-size: 1.25em; /* Ligeramente más grande que el texto normal */
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 5px; /* Espacio para la línea decorativa */
+    
+    /* Línea decorativa sutil */
+    border-bottom: 2px solid var(--color-secundario); 
+    /* Gris Hormigón: Simula la base de una estructura */
+}
+
+/* Estilo para la descripción secundaria (si la añadiste) */
+.tarjeta-contenido .subtitulo {
+    color: var(--color-secundario); /* Gris Hormigón */
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.tarjeta-imagen {
+    width: 200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
