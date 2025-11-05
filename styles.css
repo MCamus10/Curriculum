@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 80px;
     background-color: var(--color-fondo);
     color: var(--color-texto);
 }
@@ -29,17 +29,21 @@ section {
 
 /* 1. HEADER */
 header {
+    position: fixed; 
+    width: 100%;
+    top: 0; 
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
     background-color: var(--color-primario);
-    padding: 15px 10%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 15px 0; 
 }
 header a {
-    color: var(--color-fondo);
-    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
     font-weight: bold;
 }
+
 header a:hover {
     color: var(--color-acento);
 }
