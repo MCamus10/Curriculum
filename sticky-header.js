@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 window.onscroll = function() {
     const currentScrollPos = window.pageYOffset;
 
-    if (currentScrollPos === 0) {
+    if (!headerHeight) return;
+
+    if (currentScrollPos <= 5) {
         header.style.top = "0";
         prevScrollPos = 0;
         return;
