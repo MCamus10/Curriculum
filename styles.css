@@ -1,14 +1,13 @@
-/* Definición de la Paleta de Colores como Variables CSS */
 :root {
-    --color-primario: #2C3E50;    /* Azul Acero (Serio, Confianza) */
-    --color-secundario: #7F8C8D;  /* Gris Hormigón (Estabilidad) */
-    --color-acento: #F39C12;      /* Amarillo Cromo (Énfasis, CTA) */
-    --color-fondo: #FFFFFF;       /* Blanco Puro (Claridad) */
-    --color-texto: #34495E;       /* Negro Suave (Legibilidad) */
+    --color-primario: #2C3E50;    
+    --color-secundario: #7F8C8D;  
+    --color-acento: #F39C12;      
+    --color-fondo: #FFFFFF;       
+    --color-texto: #34495E;       
 }
 
 body {
-    font-family: Arial, sans-serif; /* Usar una fuente sans-serif legible */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--color-fondo);
@@ -28,11 +27,11 @@ section {
     margin-bottom: 20px;
 }
 
-/* 1. HEADER (Menú de Navegación) */
+/* 1. HEADER */
 header {
     background-color: var(--color-primario);
     padding: 15px 10%;
-    position: sticky; /* Fija la barra al desplazarse */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -55,7 +54,7 @@ header a:hover {
 .perfil-foto {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Foto circular */
+    border-radius: 50%;
     border: 5px solid var(--color-secundario);
     object-fit: cover;
     margin-bottom: 20px;
@@ -64,7 +63,7 @@ header a:hover {
 /* Botón CTA (Llamada a la Acción) */
 .cta-button {
     display: inline-block;
-    background-color: var(--color-acento); /* Color de acento para la acción principal */
+    background-color: var(--color-acento);
     color: var(--color-texto);
     padding: 10px 20px;
     margin-top: 20px;
@@ -75,7 +74,7 @@ header a:hover {
     transition: background-color 0.3s;
 }
 .cta-button:hover {
-    background-color: #e08e0b; /* Un tono más oscuro del acento al pasar el ratón */
+    background-color: #e08e0b;
     color: var(--color-fondo);
 }
 
@@ -83,7 +82,7 @@ header a:hover {
 .puesto {
     margin-bottom: 30px;
     padding-left: 20px;
-    border-left: 3px solid var(--color-acento); /* Línea de tiempo visual */
+    border-left: 3px solid var(--color-acento);
 }
 .empresa-fecha {
     color: var(--color-secundario);
@@ -91,14 +90,11 @@ header a:hover {
     margin-top: -10px;
     margin-bottom: 10px;
 }
-.logro {
-    color: var(--color-acento); /* Resalta los logros clave */
-    font-weight: bold;
-}
+
 
 /* 4. HABILIDADES */
 .fondo-secundario {
-    background-color: #ecf0f1; /* Un gris muy claro para diferenciar la sección */
+    background-color: #ecf0f1;
 }
 .lista-habilidades .habilidad {
     display: inline-block;
@@ -135,16 +131,16 @@ footer a {
 }
 
 .ejemplos {
-    border: 1px solid var(--color-secundario); /* Gris Hormigón */
+    border: 1px solid var(--color-secundario);
     border-radius: 6px;
     margin-bottom: 15px;
-    background-color: var(--color-fondo); /* Blanco Puro */
+    background-color: var(--color-fondo);
     transition: background-color 0.3s;
 }
 
 .ejemplos summary {
     padding: 15px 20px;
-    cursor: pointer; /* Muestra que se puede hacer clic */
+    cursor: pointer;
     font-size: 1.1em;
     font-weight: 500;
     color: var(--color-primario);
@@ -163,15 +159,12 @@ footer a {
 }
 
 .tarjeta-contenido h3 {
-    color: var(--color-primario); /* Azul Acero: Serio y Confiable */
-    font-size: 1.25em; /* Ligeramente más grande que el texto normal */
+    color: var(--color-primario);
+    font-size: 1.25em;
     margin-top: 0;
     margin-bottom: 5px;
-    padding-bottom: 5px; /* Espacio para la línea decorativa */
-    
-    /* Línea decorativa sutil */
+    padding-bottom: 5px;
     border-bottom: 2px solid var(--color-secundario); 
-    /* Gris Hormigón: Simula la base de una estructura */
 }
 
 .tarjeta-imagen {
@@ -196,4 +189,33 @@ footer a {
     height: 100%;
     z-index: 10;  
     background: transparent; 
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+        margin: 0px 0;
+        padding: 5px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    }
+    
+    header nav a:last-child {
+        border-bottom: none;
+    }
+
+    header nav a {
+        font-size: 1.1em;
+    }
+}
+
+section[id] { /*Defines top margin to avoid overlaping the header over content.*/
+
+    scroll-margin-top: 80px; 
 }
