@@ -17,21 +17,21 @@ const proyectosData = [
         id: 3,
         categoriaID: "independiente",
         titulo: "Torre de observación",
-        imagen: "./images/torre.png",
+        imagen: "./images/torre.jpg",
         descripcion: "Diseño de estructura de acero para torre de observación forestal."  
     },
     {
         id: 4,
         categoriaID: "independiente",
         titulo: "Sistemas de alcantarillado y agua potable rurales",
-        imagen: "./images/alc-independiente.png",
+        imagen: "./images/alc-independiente.jpg",
         descripcion: "Proyectos de saneamiento sanitario de sistemas de agua potable y alcantarillado rural (SEREMI Salud)."  
     },
     {
         id: 5,
         categoriaID: "municipalidad",
         titulo: "Sistemas de agua potable y alcantarillado domiciliario.",
-        imagen: "./images/agua-municipalidad.png",
+        imagen: "./images/agua-municipalidad.jpg",
         descripcion: "Proyectos sanitarios de alcantarillado y agua potable urbanos y rurales en la comuna de Villarrica."  
     },
     {

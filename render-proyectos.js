@@ -17,6 +17,8 @@ proyectosData.forEach(proyecto =>{
     imagen.src = proyecto.imagen;
     imagen.alt = proyecto.titulo;
     imagen.classList.add("tarjeta-imagen");
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("wrapper");
     
     const contenido = document.createElement("div");
     contenido.classList.add("tarjeta-contenido");
@@ -29,9 +31,13 @@ proyectosData.forEach(proyecto =>{
     
     contenido.appendChild(titulo);
     contenido.appendChild(descripcion);
-    tarjetaProyecto.appendChild(imagen)
+    tarjetaProyecto.appendChild(wrapper);
+    wrapper.appendChild(imagen);
     tarjetaProyecto.appendChild(contenido);
     contenedorDestino.appendChild(tarjetaProyecto);
 });
     
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
     
