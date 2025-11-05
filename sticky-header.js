@@ -1,22 +1,32 @@
-let prevScrollPos = window.pageYOffset; // Posición inicial del scroll (arriba = 0)
-const header = document.getElementById("mainHeader"); // Asegúrate que tu <header> tenga id="mainHeader"
+const header = document.getElementById("mainHeader");
+let prevScrollPos = window.pageYOffset; 
+let headerHeight = 0; 
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (header) {
+        headerHeight = header.offsetHeight;
+        header.style.top = "0";
+        document.body.style.paddingTop = headerHeight + 'px';
+    } else {
+        console.error("Error: Elemento con ID 'mainHeader' no encontrado.");
+        return;
+    }
+});
 
 window.onscroll = function() {
-    // Posición actual del scroll
     const currentScrollPos = window.pageYOffset;
-    
-    // 1. Lógica: Si el scroll sube (current < prev)
-    if (prevScrollPos > currentScrollPos) {
-        // Muestra el header: mueve la posición top a 0
+
+    if (currentScrollPos === 0) {
         header.style.top = "0";
-    } else {
-        // 2. Lógica: Si el scroll baja (current > prev)
-        // Esconde el header: mueve la posición top a un valor negativo (ej: -80px)
-        // El valor debe ser igual o mayor a la altura total de tu header.
-        header.style.top = `-${header.offsetHeight}px`; 
-        // offsetHeight es la altura calculada del elemento.
+        prevScrollPos = 0;
+        return;
+    }
+
+    if (prevScrollPos > currentScrollPos) {
+        header.style.top = "0";
+    } else if (currentScrollPos > headerHeight) {
+        header.style.top = `-${headerHeight}px`; 
     }
     
-    // 3. Actualiza la posición anterior
     prevScrollPos = currentScrollPos;
 };
