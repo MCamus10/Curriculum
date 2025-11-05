@@ -174,14 +174,6 @@ footer a {
     /* Gris Hormigón: Simula la base de una estructura */
 }
 
-/* Estilo para la descripción secundaria (si la añadiste) */
-.tarjeta-contenido .subtitulo {
-    color: var(--color-secundario); /* Gris Hormigón */
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-style: italic;
-}
 
 .tarjeta-imagen {
     width: 200px;

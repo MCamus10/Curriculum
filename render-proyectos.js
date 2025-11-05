@@ -27,7 +27,7 @@ proyectosData.forEach(proyecto =>{
     const descripcion = document.createElement("p");
     descripcion.textContent = proyecto.descripcion;
     
-    contenido.appendChild(titulo)
+    contenido.appendChild(titulo);
     contenido.appendChild(descripcion);
     tarjetaProyecto.appendChild(imagen)
     tarjetaProyecto.appendChild(contenido);
