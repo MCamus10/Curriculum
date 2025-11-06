@@ -38,7 +38,7 @@ const proyectosData = [
         id: 6,
         categoriaID: "municipalidad",
         titulo: "Cálculo de estructuras de madera",
-        imagen: "./images/madergit a-municipalidad.jpg",
+        imagen: "./images/madera-municipalidad.jpg",
         descripcion: "Proyectos de madera destinados a centros cumunitarios."  
     },
     {
